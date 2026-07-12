@@ -1,0 +1,25 @@
+.icon-section {
+  padding-left: 10px; /* adjust as needed */
+}
+
+.content-section {
+  padding-right: 0px; /* adjust as needed */
+}
+
+.dashboard-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  color: #fff;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Custom colors */
+.dashboard-card.total { background: #49dffd;}
+.dashboard-card.pending { background: #f94453; color: #000; }
+.dashboard-card.inprogress { background: #f6ce09; color: #000; }
+.dashboard-card.completed { background:  #7bf52f;}
