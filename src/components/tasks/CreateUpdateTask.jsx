@@ -46,7 +46,7 @@ const CreateUpdateTask = () => {
       setEndDate(task.endDate);
       setStatus(task.status);
       setProjectId(task.project_ID || "");
-      setProjectName(task.project_ID.title ||"");
+      setProjectName(task.project_ID.title || "");
       setExistingFile(task.docPath || "");
     } catch (error) {
       toast.error("Failed to load task");
@@ -77,13 +77,13 @@ const CreateUpdateTask = () => {
       const ed = endDate ? endDate.split("T")[0] : "";
       const formData = new FormData();
 
-      console.log(projectId._id,'projectId')
+      console.log(projectId, 'projectId')
 
       formData.append("title", title);
       formData.append("description", description);
       formData.append("startDate", st);
       formData.append("endDate", ed);
-      formData.append("project_ID", projectId._id);
+      formData.append("project_ID", projectId);
 
       if (isEdit) {
         formData.append("status", status);
@@ -124,52 +124,52 @@ const CreateUpdateTask = () => {
 
         <div className="card-body">
           <form onSubmit={handleSubmit}>
-           {isEdit ? (
-  <div className="mb-3">
-    <label className="form-label">Project</label>
+            {isEdit ? (
+              <div className="mb-3">
+                <label className="form-label">Project</label>
 
-    <div className="input-group">
-      <span className="input-group-text">
-        <FaProjectDiagram />
-      </span>
+                <div className="input-group">
+                  <span className="input-group-text">
+                    <FaProjectDiagram />
+                  </span>
 
-      <input
-        type="text"
-        className="form-control"
-        value={projectName}
-        readOnly
-      />
+                  <input
+                    type="text"
+                    className="form-control"
+                    value={projectName}
+                    readOnly
+                  />
 
-      {/* Hidden input so project ID is still submitted */}
-      <input type="hidden" value={projectId} />
-    </div>
-  </div>
-) : (
-  <div className="mb-3">
-    <label className="form-label">Project</label>
+                  {/* Hidden input so project ID is still submitted */}
+                  <input type="hidden" value={projectId} />
+                </div>
+              </div>
+            ) : (
+              <div className="mb-3">
+                <label className="form-label">Project</label>
 
-    <div className="input-group">
-      <span className="input-group-text">
-        <FaProjectDiagram />
-      </span>
+                <div className="input-group">
+                  <span className="input-group-text">
+                    <FaProjectDiagram />
+                  </span>
 
-      <select
-        className="form-select"
-        value={projectId}
-        onChange={(e) => setProjectId(e.target.value)}
-        required
-      >
-        <option value="">Select Project</option>
+                  <select
+                    className="form-select"
+                    value={projectId}
+                    onChange={(e) => setProjectId(e.target.value)}
+                    required
+                  >
+                    <option value="">Select Project</option>
 
-        {projects.map((project) => (
-          <option key={project._id} value={project._id}>
-            {project.title}
-          </option>
-        ))}
-      </select>
-    </div>
-  </div>
-)}
+                    {projects.map((project) => (
+                      <option key={project._id} value={project._id}>
+                        {project.title}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+            )}
             {/* Title */}
             <div className="mb-3">
               <label className="form-label">Task Title</label>
@@ -183,7 +183,7 @@ const CreateUpdateTask = () => {
                   placeholder="Enter task title"
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
-                  required 
+                  required
                 />
               </div>
             </div>
