@@ -45,7 +45,7 @@ const CreateUpdateTask = () => {
       setStartDate(task.startDate);
       setEndDate(task.endDate);
       setStatus(task.status);
-      setProjectId(task.project_ID || "");
+      setProjectId(task.project_ID._id || "");
       setProjectName(task.project_ID.title || "");
       setExistingFile(task.docPath || "");
     } catch (error) {
