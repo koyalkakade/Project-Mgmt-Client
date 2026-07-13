@@ -106,7 +106,7 @@ const UserTasks = () => {
                 <div className="card-body">
                     {/* Top Filter Navbar */}
                     <div className="row mb-4 g-3">
-                        <div className="col-md-5 d-flex ">
+                        <div className="col-md-8 col-sm-10 d-flex ">
                             <div>
                                 <select
                                     className="form-select"

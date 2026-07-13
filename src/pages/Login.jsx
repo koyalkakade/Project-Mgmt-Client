@@ -88,7 +88,7 @@ const Login = () => {
                    {loading ? "Logging in..." : "Login"}
                 </button>
               </form>
-              <p className="mt-3" style={{ marginLeft: "370px" }}>
+              <p className="mt-3" style={{ marginLeft: "250px" }}>
                 <Link to="/forgot-password">Forget Password</Link>
               </p>
               <p className="text-center mt-3">

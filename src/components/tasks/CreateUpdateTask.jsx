@@ -183,7 +183,7 @@ const CreateUpdateTask = () => {
                   placeholder="Enter task title"
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
-                  required readOnly
+                  required 
                 />
               </div>
             </div>

@@ -34,6 +34,8 @@ const Navbar = () => {
               ? import.meta.env.VITE_SERVER_URL+user.imgPath
               : defaultAvatar;
 
+              console.log(profileImage)
+
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary shadow">
       <div className="container-fluid">
