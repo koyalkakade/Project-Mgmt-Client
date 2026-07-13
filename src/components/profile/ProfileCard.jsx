@@ -4,7 +4,7 @@ import { FaUserEdit } from "react-icons/fa";
 function ProfileCard({ user, onEdit }) {
 
     const profileImage = user?.imgPath
-        ? user.imgPath
+        ? import.meta.env.VITE_SERVER_URL+user.imgPath
         : defaultAvatar;
 
     return (

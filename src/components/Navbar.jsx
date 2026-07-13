@@ -28,9 +28,10 @@ const Navbar = () => {
     fetchData()
   },[])
 
+  console.log(import.meta.env.VITE_SERVER_URL+user.imgPath,user,'url')
    const profileImage =
           user?.imgPath && user.imgPath.trim() !== ""
-              ? `${user.imgPath}`
+              ? import.meta.env.VITE_SERVER_URL+user.imgPath
               : defaultAvatar;
 
   return (
